@@ -1,0 +1,27 @@
+* {
+
+    --main-background: linear-gradient(#EAEDFF, #FFFFFF);
+
+    --usial-color: #696871;
+    --hover-color: #9998A1;
+    --active-color: #19191B;
+    --underline-color: #2B47FF;
+    --underline-yellow-color: #FFD100;
+    --shadow-color: rgba(71, 156, 256, .1);
+
+    --anchor-color: var(--usial-color);
+    --anchor-hover-color: var(--hover-color);
+    --active-anchor-color: var(--active-color);
+    --active-anchor-underline-color: var(--underline-color);
+    --anchor-font-size: 20px;
+    --anchor-line-height: 26px;
+    --anchor-menu-font-size: 16px;
+    --anchor-menu-line-height: 26px;
+
+    --big-title-font-size: 80px;
+    --big-title-line-height: 80px;
+
+    --title-font-size: 50px;
+    --title-line-height: 50px;
+
+}

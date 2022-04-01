@@ -1,0 +1,28 @@
+@import 'tailwind.css';
+@import "variables";
+
+@font-face {
+    font-family: Gilroy-Regular;
+    src: url("../fonts/Gilroy/Gilroy-Regular.ttf");
+}
+
+@font-face {
+    font-family: Gilroy-Thin;
+    src: url("../fonts/Gilroy/Gilroy-Thin.ttf");
+}
+
+@font-face {
+    font-family: Gilroy-Bold;
+    src: url("../fonts/Gilroy/Gilroy-Bold.ttf");
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Gilroy-Bold, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}

@@ -1,5 +1,5 @@
 <template>
-    <div class="save-ukraine-anchor" id="save">
+    <div class="save-ukraine" id="save">
         <p class="big-title">{{ bigTitle }}</p>
         <p class="description-text">{{ descriptionText }}</p>
         <div class="arrow" title="Гортати донизу" @click="scrollDown()">
@@ -9,10 +9,12 @@
                 <path d="M19.5 30.75L30 41.25L40.5 30.75" stroke="#2B47FF" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
         </div>
-        <div class="hands"></div>
-        <div class="flag-line">
-            <div class="flag-blue-line"></div>
-            <div class="flag-yellow-line"></div>
+        <div>
+            <div class="hands"></div>
+            <div class="flag-line">
+                <div class="flag-blue-line"></div>
+                <div class="flag-yellow-line"></div>
+            </div>
         </div>
     </div>
 </template>
@@ -47,13 +49,17 @@ export default {
 
 <style scoped lang="scss">
 
-.save-ukraine-anchor {
+.save-ukraine {
     width: 100%;
-    height: 100%;
-    margin-top: 191px;
+    height: calc(100vh - 110px);
+    padding-top: 50px;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     align-items: center;
+    @media (max-height: 790px) {
+        height: auto;
+    }
 }
 
 .big-title {
@@ -63,7 +69,6 @@ export default {
 
 .description-text {
     width: 45%;
-    margin-top: 26px;
     text-align: center;
     color: var(--usial-color);
     font-family: Gilroy-Regular, sans-serif;
@@ -72,7 +77,6 @@ export default {
 }
 
 .arrow {
-    margin-top: 50px;
     cursor: pointer;
     &:hover {
         svg path:first-child {
@@ -84,7 +88,6 @@ export default {
 .hands {
     width: 1209px;
     height: 389px;
-    margin-top: 82px;
     background: url("../../assets/img/hands.png") no-repeat;
     background-size: contain;
 }

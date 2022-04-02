@@ -13,6 +13,17 @@
                         {{ item.title }}
                 </div>
             </div>
+            <div class="burger-menu" @click="dropdownVisible = !dropdownVisible">
+                <p>&#9776;</p>
+                <div v-if="dropdownVisible" class="burger-menu-items">
+                    <div class="anchors-menu-item"
+                         v-for="(item, index) in anchors"
+                         :class="{ active: index === activeAnchor }"
+                         @click="anchorClick(index)">
+                        {{ item.title }}
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </template>
@@ -31,7 +42,8 @@ export default {
                 { title: 'Про Фонд', id: 'about' },
                 { title: 'Реквізити Фонду', id: 'requisites' }
             ],
-            activeAnchor: 0
+            activeAnchor: 0,
+            dropdownVisible: false
         }
     },
 
@@ -60,7 +72,6 @@ export default {
     justify-content: space-around;
     align-items: center;
     padding: 0 5px;
-    overflow-y: auto;
 }
 
 .logo {
@@ -72,7 +83,6 @@ export default {
 
 .anchors {
     width: 40%;
-    position: relative;
     &-menu {
         display: flex;
         flex-direction: row;
@@ -91,6 +101,33 @@ export default {
                 color: var(--active-anchor-color);
                 border-bottom: 2px solid var(--underline-color);
             }
+        }
+    }
+    .burger-menu {
+        width: 100%;
+        position: relative;
+        display: none;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-end;
+        float: right;
+        cursor: pointer;
+        p {
+            font-size: var(--burger-font-size);
+        }
+        &-items {
+            top: 100%;
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-end;
+            float: right;
+            padding: 10px;
+            background: #EAEDFF;
+            border: 1px solid var(--hover-color);
+            border-radius: 4px;
+            box-shadow: 10px 10px var(--hover-color);
         }
     }
 }
@@ -115,12 +152,10 @@ export default {
 
     .anchors {
         .anchors-menu {
-            flex-direction: column;
-            justify-content: flex-start;
-            align-items: flex-end;
-            &-item {
-                padding-bottom: 2px;
-            }
+            display: none
+        }
+        .burger-menu {
+            display: flex;
         }
     }
 

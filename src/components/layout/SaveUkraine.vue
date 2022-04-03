@@ -37,6 +37,7 @@ export default {
     methods: {
 
         scrollDown() {
+            window.location.hash = 'top';
             window.location.hash = 'requisites';
         }
 

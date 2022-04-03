@@ -57,7 +57,7 @@ export default {
             reqSubTitleText: 'Lorem ipsum dolor amet',
             accounts: [
                 {
-                    name: 'Євро рахунок',
+                    name: 'Євро',
                     companyName: 'SaveUkraine',
                     ibanCode: 'UA000000000000000000000000000',
                     bankName: 'AAA AA "PRIVATBANK, 120 KHRESCHATYK STR., KYIV, 00001, UKRAINE"',
@@ -65,7 +65,7 @@ export default {
                     address: 'Ukraine, 00001, Kyiv, Khreschatyk str., 154, office 43'
                 },
                 {
-                    name: 'Долар рахунок',
+                    name: 'Долар',
                     companyName: '',
                     ibanCode: '',
                     bankName: '',
@@ -74,7 +74,7 @@ export default {
 
                 },
                 {
-                    name: 'Гривня рахунок',
+                    name: 'Гривня',
                     companyName: '',
                     ibanCode: '',
                     bankName: '',
@@ -83,7 +83,7 @@ export default {
 
                 },
                 {
-                    name: 'PayPal рахунок',
+                    name: 'PayPal',
                     companyName: '',
                     ibanCode: '',
                     bankName: '',
@@ -165,14 +165,15 @@ export default {
             flex-direction: column;
             justify-content: space-around;
             align-items: center;
-            padding: 46px 0;
+            padding: 46px 100px;
             background: var(--shadow-color);
             border-radius: 4px;
             &-row {
                 width: 100%;
                 display: flex;
                 flex-direction: row;
-                justify-content: flex-start;
+                justify-content: space-between;
+                flex-wrap: wrap;
                 align-items: center;
                 margin-top: 40px;
                 .requisite {
@@ -180,7 +181,6 @@ export default {
                     flex-direction: column;
                     justify-content: space-between;
                     align-items: flex-start;
-                    margin-left: 100px;
                     .req-name {
                         font-family: Gilroy-Regular, sans-serif;
                         color: var(--active-anchor-color);
@@ -200,28 +200,45 @@ export default {
 }
 
 @media (max-width: 1000px) {
-    .req-accounts-values-row {
-        .requisite {
-            margin-left: 5px;
-            .req-name, .req-value {
-                font-size: 0.8em;
+    .req-accounts-values {
+        padding: 46px 5px;
+    }
+}
+
+@media (max-width: 730px) {
+    .req-accounts {
+        flex-direction: column;
+        &-values {
+            width: 90%;
+        }
+        &-names {
+            width: 90%;
+            flex-direction: row;
+            justify-content: space-around;
+            &-item {
+                &.active {
+                    &:after {
+                        display: none;
+                    }
+                    border-bottom: 2px solid var(--underline-color);
+                }
             }
         }
     }
 }
 
-@media (max-width: 550px) {
-    .req-accounts-values-row {
-        flex-wrap: wrap;
+@media (max-width: 400px) {
+    .req-title {
+        font-size: var(--title-mobile-font-size);
+        line-height: var(--title-mobile-line-height);
     }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 360px) {
     .req-accounts-values-row {
         .requisite {
-            margin-left: 0;
             .req-name, .req-value {
-                font-size: 0.6em;
+                font-size: 0.8em;
             }
         }
     }

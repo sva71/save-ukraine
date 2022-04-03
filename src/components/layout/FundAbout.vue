@@ -87,64 +87,24 @@ export default {
     }
 }
 
-@media (max-width: 1000px) {
-    .text-title, .text-p1, .text-p2 {
-        font-size: 0.9em;
-    }
-}
-
-@media (max-width: 900px) {
-    .text-title, .text-p1, .text-p2 {
-        font-size: 0.8em;
-    }
-}
-
-@media (max-width: 800px) {
+@media (max-width: 865px) {
     .text {
         width: 90%;
-        margin-bottom: 20px;
+        margin-bottom: 50px;
     }
-    .text-title, .text-p1, .text-p2 {
-        font-size: 1em;
+
+}
+
+@media (max-width: 650px) {
+    .text-title {
+        font-size: var(--title-mobile-font-size);
+        line-height: var(--title-mobile-line-height);
     }
 }
 
 @media (max-width: 600px) {
     .photo {
         display: none;
-    }
-}
-
-@media (max-width: 500px) {
-    .text-title, .text-p1, .text-p2 {
-        font-size: 0.9em;
-    }
-}
-
-@media (max-width: 400px) {
-    .text-title {
-        font-size: 30px;
-    }
-    .text-p1, .text-p2 {
-        font-size: 16px;
-    }
-}
-
-@media (max-width: 300px) {
-    .text-title {
-        font-size: 20px;
-    }
-    .text-p1, .text-p2 {
-        font-size: 14px;
-    }
-}
-
-@media (max-width: 200px) {
-    .text-title {
-        font-size: 16px;
-    }
-    .text-p1, .text-p2 {
-        font-size: 12px;
     }
 }
 

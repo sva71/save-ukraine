@@ -10,7 +10,7 @@
                     v-for="(item, index) in anchors"
                     :class="{ active: index === activeAnchor }"
                     @click="anchorClick(index)">
-                        {{ item.title }}
+                        {{ item.title[lang] }}
                 </div>
             </div>
             <p class="burger-symbol" @click="dropdownVisible = !dropdownVisible">&#9776;</p>
@@ -21,7 +21,7 @@
                          v-for="(item, index) in anchors"
                          :class="{ active: index === activeAnchor }"
                          @click="anchorClick(index)">
-                        {{ item.title }}
+                        {{ item.title[lang] }}
                     </div>
                 </div>
             </div>
@@ -36,12 +36,16 @@ export default {
 
     name: "TopPanel",
 
+    props: {
+        lang: String
+    },
+
     data() {
         return {
             anchors: [
-                { title: 'Save Ukraine!', id: 'save' },
-                { title: 'Про Фонд', id: 'about' },
-                { title: 'Реквізити Фонду', id: 'requisites' }
+                { title: { 'UK': 'Save Ukraine!', 'EN': 'Save Ukraine!' }, id: 'save' },
+                { title: { 'UK': 'Про Фонд', 'EN': 'Fund About' }, id: 'about' },
+                { title: { 'UK': 'Реквізити Фонду', 'EN': 'Fund Details' }, id: 'details' }
             ],
             activeAnchor: 0,
             dropdownVisible: false
@@ -122,14 +126,6 @@ export default {
         flex-direction: row;
         justify-content: flex-end;
         background: rgba(0, 0, 0, 0.75);
-        .arrow {
-            width: 100%;
-            padding-left: 10px;
-            cursor: pointer;
-            user-select: none;
-            font-family: Gilroy-Regular, sans-serif;
-            font-size: var(--burger-font-size);
-        }
         &-items {
             width: 60%;
             height: 100%;
@@ -137,11 +133,18 @@ export default {
             display: flex;
             flex-direction: column;
             justify-content: space-around;
-            align-items: center;
-            text-align: left;
+            align-items: flex-start;
+            padding-left: 50px;
             background: white;
             border-radius: 4px;
             user-select: none;
+            .arrow {
+                width: 100%;
+                cursor: pointer;
+                user-select: none;
+                font-family: Gilroy-Regular, sans-serif;
+                font-size: var(--burger-font-size);
+            }
         }
     }
 }

@@ -1,14 +1,14 @@
 <template>
-    <div class="req" id="requisites">
-        <p class="req-title">{{ reqTitleText }}</p>
-        <p class="req-subtitle">{{ reqSubTitleText }}</p>
+    <div class="req" id="details">
+        <p class="req-title">{{ reqTitleText[lang] }}</p>
+        <p class="req-subtitle">{{ reqSubTitleText[lang] }}</p>
         <div class="req-accounts">
             <div class="req-accounts-names">
                 <div
                     v-for="(item, index) in accounts" class="req-accounts-names-item"
                     :class="{ active: index === activeAccount }"
                     @click="activeAccount = index">
-                        {{ item.name }}
+                        {{ item.name[lang] }}
                 </div>
             </div>
             <div class="req-accounts-values">
@@ -46,18 +46,20 @@
 
 <script>
 
-import {Back} from "@element-plus/icons-vue";
+
 export default {
 
     name: "Requisites",
-    components: {Back},
+
+    props: { lang: String },
+
     data() {
         return {
-            reqTitleText: 'Реквізити Фонду',
-            reqSubTitleText: 'Lorem ipsum dolor amet',
+            reqTitleText: { 'UK': 'Реквізити Фонду', 'EN': 'Fund Details'},
+            reqSubTitleText: { 'UK': 'Підзаголовок', 'EN': 'Subtitle' },
             accounts: [
                 {
-                    name: 'Євро',
+                    name: { 'UK': 'Євро', 'EN': 'EUR'},
                     companyName: 'SaveUkraine',
                     ibanCode: 'UA000000000000000000000000000',
                     bankName: 'AAA AA "PRIVATBANK, 120 KHRESCHATYK STR., KYIV, 00001, UKRAINE"',
@@ -65,7 +67,7 @@ export default {
                     address: 'Ukraine, 00001, Kyiv, Khreschatyk str., 154, office 43'
                 },
                 {
-                    name: 'Долар',
+                    name: {'UK': 'Долар', 'EN': 'USD'},
                     companyName: '',
                     ibanCode: '',
                     bankName: '',
@@ -74,7 +76,7 @@ export default {
 
                 },
                 {
-                    name: 'Гривня',
+                    name: {'UK': 'Гривня', 'EN': 'UAH' },
                     companyName: '',
                     ibanCode: '',
                     bankName: '',
@@ -83,7 +85,7 @@ export default {
 
                 },
                 {
-                    name: 'PayPal',
+                    name: {'UK': 'PayPal', 'EN': 'PayPal'},
                     companyName: '',
                     ibanCode: '',
                     bankName: '',

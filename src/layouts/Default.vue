@@ -1,10 +1,16 @@
 <template>
     <div class="wrapper" id="top">
-        <TopPanel />
-        <SaveUkraine />
-        <FundAbout />
-        <Requisites />
-        <Footer />
+        <div class="languages">
+            <p v-for="lang in languages" class="lang-item"
+                :class="{ active: activeLang === lang }" @click="changeLang(lang)">
+                    {{ lang }}
+            </p>
+        </div>
+        <TopPanel :lang="activeLang" />
+        <SaveUkraine :lang="activeLang" />
+        <FundAbout :lang="activeLang" />
+        <Requisites :lang="activeLang" />
+        <Footer :lang="activeLang" />
     </div>
 </template>
 
@@ -28,8 +34,16 @@ export default {
 
     data() {
         return {
-            text: 'Hello, world!'
+            languages: ['UK', 'EN'],
+            activeLang: localStorage.getItem('saveUkraineLang') ? localStorage.getItem('saveUkraineLang') : 'UK'
         }
+    },
+
+    methods: {
+      changeLang(lang) {
+          this.activeLang = lang;
+          localStorage.setItem('saveUkraineLang', lang);
+      }
     }
 
 }
@@ -42,9 +56,27 @@ export default {
 .wrapper {
     width: 100%;
     min-height: 100vh;
-    padding-top: 50px;
+    padding-top: 20px;
     background: var(--main-background);
     overflow-y: scroll;
+    .languages {
+        display: flex;
+        flex-direction: row;
+        float: right;
+        margin-bottom: 7px;
+        padding-right: 20px;
+        .lang-item {
+            color: var(--usial-color);
+            margin-left: 10px;
+            padding-bottom: 2px;
+            cursor: pointer;
+            user-select: none;
+            &.active {
+                color: var(--active-anchor-color);
+                border-bottom: 2px solid var(--underline-color);
+            }
+        }
+    }
 }
 
 </style>

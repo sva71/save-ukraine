@@ -1,11 +1,11 @@
 <template>
     <div class="fund-about" id="about">
         <div class="text">
-            <p class="text-title">{{ textTitle }}</p>
+            <p class="text-title">{{ textTitle[lang] }}</p>
             <br>
-            <p class="text-p1">{{ textP1 }}</p>
+            <p class="text-p1">{{ textP1[lang] }}</p>
             <br>
-            <p class="text-p2">{{ textP2 }}</p>
+            <p class="text-p2">{{ textP2[lang] }}</p>
         </div>
         <div class="photo">
             <img src="../../assets/img/flower.png" alt="flower_pic">
@@ -21,15 +21,29 @@ export default {
 
     name: "FundAbout",
 
+    props: { lang: String },
+
     data() {
         return {
-            textTitle: 'Про Фонд',
-            textP1: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut quis facilisi nec nulla. Lectus ac ' +
-                'scelerisque eu ligula sed at at vitae. Orci pulvinar nunc sit cras nunc, cras euismod mattis. ' +
-                'Sit egestas elit, elementum pellentesque morbi. ',
-            textP2: 'Nulla id sociis diam id venenatis. Ullamcorper id in diam facilisis at netus diam tincidunt. ' +
-                'Facilisis et enim, amet nulla ornare scelerisque curabitur massa orci. Laoreet in molestie vitae ' +
-                'elit sem enim, adipiscing. Egestas urna, dolor, enim arcu. Accumsan vel massa arcu eu.'
+            textTitle: { 'UK': 'Про Фонд', 'EN': 'Fund About' },
+            textP1: {
+                'UK': 'Текст українською мовою. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut quis ' +
+                    'facilisi nec nulla. Lectus ac scelerisque eu ligula sed at at vitae. Orci pulvinar nunc sit ' +
+                    'cras nunc, cras euismod mattis. Sit egestas elit, elementum pellentesque morbi.',
+                'EN': 'English text. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut quis facilisi ' +
+                    'nec nulla. Lectus ac scelerisque eu ligula sed at at vitae. Orci pulvinar nunc sit cras nunc, ' +
+                    'cras euismod mattis. Sit egestas elit, elementum pellentesque morbi.'
+            },
+            textP2: {
+                'UK': 'Текст українською мовою. Nulla id sociis diam id venenatis. Ullamcorper id in diam facilisis ' +
+                    'at netus diam tincidunt. Facilisis et enim, amet nulla ornare scelerisque curabitur massa orci. ' +
+                    'Laoreet in molestie vitae elit sem enim, adipiscing. Egestas urna, dolor, enim arcu. Accumsan ' +
+                    'vel massa arcu eu.',
+                'EN': 'English text. Nulla id sociis diam id venenatis. Ullamcorper id in diam facilisis at netus ' +
+                    'diam tincidunt. Facilisis et enim, amet nulla ornare scelerisque curabitur massa orci. ' +
+                    'Laoreet in molestie vitae elit sem enim, adipiscing. Egestas urna, dolor, enim arcu. ' +
+                    'Accumsan vel massa arcu eu.'
+            }
         }
     }
 

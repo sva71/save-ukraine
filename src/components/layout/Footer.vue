@@ -5,7 +5,7 @@
             <img src="../../assets/img/SaveUkraine.png" alt="save_ukraine">
         </div>
         <p>{{ email }}</p>
-        <p>{{ address }}</p>
+        <p>{{ address[lang] }}</p>
     </div>
 </template>
 
@@ -16,10 +16,12 @@ export default {
 
     name: "Footer",
 
+    props: { lang: String },
+
     data() {
         return {
             email: 'support@saveukraine.org.ua',
-            address: '00001, м. Київ, вул. Хрещатик 15, офіс 43'
+            address: {'UK': '00001, м. Київ, вул. Хрещатик 15, офіс 43', 'EN': '43, Khreschatyk 15, Kyiv, Ukraine, Zip: 00001'}
         }
     }
 

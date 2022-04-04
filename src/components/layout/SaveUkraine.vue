@@ -1,7 +1,7 @@
 <template>
     <div class="save-ukraine" id="save">
-        <p class="big-title">{{ bigTitle }}</p>
-        <p class="description-text">{{ descriptionText }}</p>
+        <p class="big-title">{{ bigTitle[lang] }}</p>
+        <p class="description-text">{{ descriptionText[lang] }}</p>
         <div class="arrow" title="Гортати донизу" @click="scrollDown()">
             <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M59.5 30C59.5 46.2924 46.2924 59.5 30 59.5C13.7076 59.5 0.5 46.2924 0.5 30C0.5 13.7076 13.7076 0.5 30 0.5C46.2924 0.5 59.5 13.7076 59.5 30Z" stroke="#E7E7E7"/>
@@ -26,11 +26,21 @@ export default {
 
     name: "SaveUkraine",
 
+    props: {
+        lang: String
+    },
+
     data() {
         return {
-            bigTitle: 'Save Ukraine!',
-            descriptionText: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. At habitant iaculis sed mauris ' +
-                'metus elit orci. Arcu hendrerit magna duis sed consectetur elementum sit senectus praesent.'
+            bigTitle: { 'UK': 'Save Ukraine!', 'EN': 'Save Ukraine!' },
+            descriptionText: {
+                'UK': 'Текст українською мовою. Lorem ipsum dolor sit amet, consectetur adipiscing elit. ' +
+                    'At habitant iaculis sed mauris metus elit orci. Arcu hendrerit magna duis sed consectetur ' +
+                    'elementum sit senectus praesent.',
+                'EN': 'English text. Lorem ipsum dolor sit amet, consectetur adipiscing elit. At habitant iaculis ' +
+                    'sed mauris metus elit orci. Arcu hendrerit magna duis sed consectetur elementum sit senectus ' +
+                    'praesent.'
+            }
         }
     },
 
@@ -52,7 +62,7 @@ export default {
 
 .save-ukraine {
     width: 100%;
-    height: calc(100vh - 110px);
+    height: calc(100vh - 115px);
     padding-top: 50px;
     display: flex;
     flex-direction: column;

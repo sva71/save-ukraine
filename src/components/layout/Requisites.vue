@@ -56,43 +56,43 @@ export default {
     data() {
         return {
             reqTitleText: { 'UK': 'Реквізити Фонду', 'EN': 'Fund Details'},
-            reqSubTitleText: { 'UK': 'Підзаголовок', 'EN': 'Subtitle' },
+            reqSubTitleText: { 'UK': 'Банківські рахунки', 'EN': 'Accounts' },
             accounts: [
                 {
                     name: { 'UK': 'Євро', 'EN': 'EUR'},
-                    companyName: 'SaveUkraine',
-                    ibanCode: 'UA000000000000000000000000000',
-                    bankName: 'AAA AA "PRIVATBANK, 120 KHRESCHATYK STR., KYIV, 00001, UKRAINE"',
-                    swiftCode: 'SAVEUKRAINE',
-                    address: 'Ukraine, 00001, Kyiv, Khreschatyk str., 154, office 43'
+                    companyName: 'Charity fund "SaveUkraine"',
+                    ibanCode: 'UA773052990000026008030119568',
+                    bankName: 'JSC CB "Privatbank"',
+                    swiftCode: 'PBANUA2X',
+                    address: 'UKRAINE, Kyiv, 29, Voloshska St., 04070'
                 },
                 {
                     name: {'UK': 'Долар', 'EN': 'USD'},
-                    companyName: '',
-                    ibanCode: '',
-                    bankName: '',
-                    swiftCode: '',
-                    address: ''
+                    companyName: 'Charity fund "SaveUkraine"',
+                    ibanCode: 'UA773052990000026008030119568',
+                    bankName: 'JSC CB "Privatbank"',
+                    swiftCode: 'PBANUA2X',
+                    address: 'UKRAINE, Kyiv, 29, Voloshska St., 04070'
 
                 },
                 {
                     name: {'UK': 'Гривня', 'EN': 'UAH' },
-                    companyName: '',
-                    ibanCode: '',
-                    bankName: '',
-                    swiftCode: '',
-                    address: ''
+                    companyName: 'Charity fund "SaveUkraine"',
+                    ibanCode: 'UA773052990000026008030119568',
+                    bankName: 'JSC CB "Privatbank"',
+                    swiftCode: 'PBANUA2X',
+                    address: 'UKRAINE, Kyiv, 29, Voloshska St., 04070'
 
-                },
-                {
-                    name: {'UK': 'PayPal', 'EN': 'PayPal'},
-                    companyName: '',
-                    ibanCode: '',
-                    bankName: '',
-                    swiftCode: '',
-                    address: ''
-
-                },
+                }
+                // {
+                //     name: {'UK': 'PayPal', 'EN': 'PayPal'},
+                //     companyName: '',
+                //     ibanCode: '',
+                //     bankName: '',
+                //     swiftCode: '',
+                //     address: ''
+                //
+                // },
             ],
             activeAccount: 0
         }
@@ -174,11 +174,12 @@ export default {
                 width: 100%;
                 display: flex;
                 flex-direction: row;
-                justify-content: space-between;
+                justify-content: flex-start;
                 flex-wrap: wrap;
                 align-items: center;
                 margin-top: 40px;
                 .requisite {
+                    width: 50%;
                     display: flex;
                     flex-direction: column;
                     justify-content: space-between;
@@ -225,6 +226,14 @@ export default {
                     border-bottom: 2px solid var(--underline-color);
                 }
             }
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    .req-accounts-values-row {
+        .requisite {
+            width: 100%;
         }
     }
 }

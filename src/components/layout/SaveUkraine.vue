@@ -159,29 +159,9 @@ export default {
     }
 }
 
-@media (max-width: 530px) {
-    .big-title {
-        font-size: 60px;
-    }
-    .subtitle, .description-text {
-        font-size: 14px;
-    }
-    .hands {
-        width: 400px;
-        height: 128px;
-    }
-}
-
-@media (max-width: 400px) {
+@media (max-width: 515px) {
     .big-title {
         font-size: 40px;
-    }
-    .subtitle, .description-text {
-        font-size: 12px;
-    }
-    .hands {
-        width: 300px;
-        height: 96px;
     }
 }
 

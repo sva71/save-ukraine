@@ -64,7 +64,7 @@ export default {
         flex-direction: row;
         float: right;
         margin-bottom: 7px;
-        padding-right: 20px;
+        padding-right: 10px;
         .lang-item {
             color: var(--usial-color);
             margin-left: 10px;
@@ -75,14 +75,6 @@ export default {
                 color: var(--active-anchor-color);
                 border-bottom: 2px solid var(--underline-color);
             }
-        }
-    }
-}
-
-@media (max-width: 650px) {
-    .wrapper {
-        .languages {
-            padding-right: 5px;
         }
     }
 }

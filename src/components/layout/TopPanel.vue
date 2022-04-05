@@ -15,13 +15,15 @@
             </div>
             <p class="burger-symbol" @click="dropdownVisible = !dropdownVisible">&#9776;</p>
             <div v-if="dropdownVisible" class="burger-menu">
-                <div class="burger-menu-items">
-                    <p class="arrow" @click="dropdownVisible = false">&#8592;</p>
-                    <div class="anchors-menu-item"
-                         v-for="(item, index) in anchors"
-                         :class="{ active: index === activeAnchor }"
-                         @click="anchorClick(index)">
-                        {{ item.title[lang] }}
+                <div class="burger-menu-panel">
+                    <div class="burger-menu-items">
+                        <p class="arrow" @click="dropdownVisible = false">&#8592;</p>
+                        <div class="anchors-menu-item"
+                             v-for="(item, index) in anchors"
+                             :class="{ active: index === activeAnchor }"
+                             @click="anchorClick(index)">
+                            {{ item.title[lang] }}
+                        </div>
                     </div>
                 </div>
             </div>
@@ -78,7 +80,7 @@ export default {
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    padding: 0 5px;
+    padding: 0 10px;
 }
 
 .logo {
@@ -126,9 +128,14 @@ export default {
         flex-direction: row;
         justify-content: flex-end;
         background: rgba(0, 0, 0, 0.75);
-        &-items {
+        &-panel {
             width: 60%;
             height: 100%;
+            background: white;
+        }
+        &-items {
+            width: 100%;
+            height: 50%;
             position: absolute;
             display: flex;
             flex-direction: column;

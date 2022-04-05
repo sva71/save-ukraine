@@ -27,22 +27,23 @@ export default {
         return {
             textTitle: { 'UK': 'Про Фонд', 'EN': 'Fund About' },
             textP1: {
-                'UK': 'Текст українською мовою. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut quis ' +
-                    'facilisi nec nulla. Lectus ac scelerisque eu ligula sed at at vitae. Orci pulvinar nunc sit ' +
-                    'cras nunc, cras euismod mattis. Sit egestas elit, elementum pellentesque morbi.',
-                'EN': 'English text. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut quis facilisi ' +
-                    'nec nulla. Lectus ac scelerisque eu ligula sed at at vitae. Orci pulvinar nunc sit cras nunc, ' +
-                    'cras euismod mattis. Sit egestas elit, elementum pellentesque morbi.'
+                'UK': 'Ми - безпосередні учасники бойових дій, тому поінформовані про актуальний дефіцит українських ' +
+                    'військових і розробили найшвидші шляхи вирішення адресних потреб. Даємо змогу усім небайдужим ' +
+                    'з будь-якої точки планети дистанційно брати участь у боях за Україну першочергової важливості, ' +
+                    'підтримуючи збройний арсенал на передовій.',
+                'EN': 'We are direct participants in hostilities, so we have actual information about needs of our ' +
+                    'troops and we\'ve developed the fastest routes of solving targeted needs. We give an opportunity ' +
+                    'to all those who are not indifferent from anywhere in the world to take part in priority battles ' +
+                    'for Ukraine distantly and support weapons arsenal at the forefront.'
             },
             textP2: {
-                'UK': 'Текст українською мовою. Nulla id sociis diam id venenatis. Ullamcorper id in diam facilisis ' +
-                    'at netus diam tincidunt. Facilisis et enim, amet nulla ornare scelerisque curabitur massa orci. ' +
-                    'Laoreet in molestie vitae elit sem enim, adipiscing. Egestas urna, dolor, enim arcu. Accumsan ' +
-                    'vel massa arcu eu.',
-                'EN': 'English text. Nulla id sociis diam id venenatis. Ullamcorper id in diam facilisis at netus ' +
-                    'diam tincidunt. Facilisis et enim, amet nulla ornare scelerisque curabitur massa orci. ' +
-                    'Laoreet in molestie vitae elit sem enim, adipiscing. Egestas urna, dolor, enim arcu. ' +
-                    'Accumsan vel massa arcu eu.'
+                'UK': 'Ми працюємо з Укроборонпромом, власноруч забезпеуємо армію танками та летальною зброєю. А також ' +
+                    'блискавично лагодимо підбите й повертаємо на лінію 0. Швидко доставляємо в гарячі точки бойові ' +
+                    'літаки та гелікоптери, засоби ППО, ПЗРК, важку бронетехніку, іншу зброю.',
+                'EN': 'We contribute with Ukroboronprom, provide armed forces with tanks and lethal weapons by ' +
+                    'ourselves. Also we lightning fast repair damaged equipment and return it to the forefront. ' +
+                    'Fast delivery military planes and helicopters, air defence systems, anti-aircraft missile systems, ' +
+                    'heavy armored vehicles and other weapons to hot spots.'
             }
         }
     }

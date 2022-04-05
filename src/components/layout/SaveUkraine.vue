@@ -1,6 +1,7 @@
 <template>
     <div class="save-ukraine" id="save">
         <p class="big-title">{{ bigTitle[lang] }}</p>
+        <div class="subtitle">{{ subTitle[lang] }}</div>
         <p class="description-text">{{ descriptionText[lang] }}</p>
         <div class="arrow" title="Гортати донизу" @click="scrollDown()">
             <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -33,13 +34,18 @@ export default {
     data() {
         return {
             bigTitle: { 'UK': 'Save Ukraine!', 'EN': 'Save Ukraine!' },
+            subTitle: { 'UK': 'Благодійний фонд «Save Ukraine».', 'EN': 'Charitable Foundation «Save Ukraine».'},
             descriptionText: {
-                'UK': 'Текст українською мовою. Lorem ipsum dolor sit amet, consectetur adipiscing elit. ' +
-                    'At habitant iaculis sed mauris metus elit orci. Arcu hendrerit magna duis sed consectetur ' +
-                    'elementum sit senectus praesent.',
-                'EN': 'English text. Lorem ipsum dolor sit amet, consectetur adipiscing elit. At habitant iaculis ' +
-                    'sed mauris metus elit orci. Arcu hendrerit magna duis sed consectetur elementum sit senectus ' +
-                    'praesent.'
+                'UK': 'Швидке забезпечення термінових потреб ЗСУ, Нацгвардії, поліції та інших військових формувань.\n' +
+                    'Фонд засновано з 2014 року - з початку першої військової агресії росії. Дві хвилини на просте ' +
+                    'оформлення донату - і солдати вже отримують ваш внесок у вигляді забезпечення. Ми оминаємо ' +
+                    'бюрократію і даємо сувору звітність. Кожна ваша гривня - це крок до Перемоги і підсилення ' +
+                    'бойового духу, адже відчувати вашу підтримку - безцінно!',
+                'EN': 'Fast provision of urgent needs of Ukrainian Armed Forces, National Guard, Police and other ' +
+                    'military units. Foundation founded in 2014 - from the begining of russian agression. Two minutes ' +
+                    'on simple donation registration - and ukrainian troops are already receiving your deposit in the ' +
+                    'useful stuff form. We avoid bureaucracy and provide strict reporting. Every your UAH is one step ' +
+                    'to the Victory and morale boost, cause feeling of your support - priceless.'
             }
         }
     },
@@ -48,7 +54,7 @@ export default {
 
         scrollDown() {
             window.location.hash = 'top';
-            window.location.hash = 'requisites';
+            window.location.hash = 'details';
         }
 
     }
@@ -78,8 +84,8 @@ export default {
     line-height: var(--big-title-line-height);
 }
 
-.description-text {
-    width: 45%;
+.subtitle, .description-text {
+    width: 70%;
     text-align: center;
     color: var(--usial-color);
     font-family: Gilroy-Regular, sans-serif;

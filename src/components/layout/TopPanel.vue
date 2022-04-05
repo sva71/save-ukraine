@@ -2,7 +2,7 @@
     <div class="top-panel">
         <div class="logo">
             <img src="../../assets/img/heart.png" alt="ukrainian_heart">
-            <img src="../../assets/img/SaveUkraine.png" alt="save_ukraine">
+            <img id="save-ukraine" src="../../assets/img/SaveUkraine.png" alt="save_ukraine">
         </div>
         <div class="anchors">
             <div class="anchors-menu">
@@ -160,12 +160,19 @@ export default {
 
 @media (max-width: 650px) {
     .anchors {
+        width: 10%;
         .anchors-menu {
             display: none
         }
         .burger-symbol {
             display: block;
         }
+    }
+}
+
+@media (max-width: 300px) {
+    #save-ukraine {
+        display: none;
     }
 }
 

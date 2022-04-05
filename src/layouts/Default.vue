@@ -79,4 +79,12 @@ export default {
     }
 }
 
+@media (max-width: 650px) {
+    .wrapper {
+        .languages {
+            padding-right: 5px;
+        }
+    }
+}
+
 </style>

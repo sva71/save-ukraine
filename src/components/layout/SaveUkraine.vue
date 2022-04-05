@@ -163,7 +163,7 @@ export default {
     .big-title {
         font-size: 60px;
     }
-    .description-text {
+    .subtitle, .description-text {
         font-size: 14px;
     }
     .hands {
@@ -176,7 +176,7 @@ export default {
     .big-title {
         font-size: 40px;
     }
-    .description-text {
+    .subtitle, .description-text {
         font-size: 12px;
     }
     .hands {

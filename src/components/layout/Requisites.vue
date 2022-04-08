@@ -11,7 +11,7 @@
                         {{ item.name[lang] }}
                 </div>
             </div>
-            <div class="req-accounts-values">
+            <div v-if="accounts[activeAccount].ibanCode" class="req-accounts-values">
                 <div class="req-accounts-values-row">
                     <div class="requisite">
                         <p class="req-name">Company Name</p>
@@ -36,6 +36,22 @@
                     <div class="requisite">
                         <p class="req-name">Company address</p>
                         <p class="req-value">{{ accounts[activeAccount].address }}</p>
+                    </div>
+                </div>
+            </div>
+            <div v-if="accounts[activeAccount].accountName" class="req-accounts-values">
+                <div class="req-accounts-values-row">
+                    <div class="requisite">
+                        <p class="req-name">Paypal Account</p>
+                        <p class="req-value">{{ accounts[activeAccount].accountName }}</p>
+                    </div>
+                    <div class="requisite">
+                        <p class="req-name">Site</p>
+                        <p class="req-value">
+                            <a :href="accounts[activeAccount].gotoUrl" target="_blank">
+                                {{ accounts[activeAccount].gotoUrl }}
+                            </a>
+                        </p>
                     </div>
                 </div>
             </div>
@@ -83,18 +99,28 @@ export default {
                     swiftCode: 'PBANUA2X',
                     address: 'UKRAINE, Kyiv, 29, Voloshska St., 04070'
 
-                }
-                // {
-                //     name: {'UK': 'PayPal', 'EN': 'PayPal'},
-                //     companyName: '',
-                //     ibanCode: '',
-                //     bankName: '',
-                //     swiftCode: '',
-                //     address: ''
-                //
-                // },
+                },
+                {
+                    name: {'UK': 'PayPal', 'EN': 'PayPal'},
+                    companyName: '',
+                    ibanCode: '',
+                    bankName: '',
+                    swiftCode: '',
+                    address: '',
+                    accountName: 'donate@saveukrainefund.com',
+                    gotoUrl: 'http://paypal.com'
+                },
             ],
             activeAccount: 0
+        }
+    },
+
+    methods: {
+        accountClick(index) {
+            this.activeAccount = index;
+            if (this.accounts[this.activeAccount].gotoUrl) {
+                window.open(this.accounts[this.activeAccount].gotoUrl, '_blank');
+            }
         }
     }
 

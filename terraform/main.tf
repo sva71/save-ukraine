@@ -41,8 +41,7 @@ provider "aws" {
 locals {
   project_name = "saveukrainefund"
   environment  = "production"
-
-  main_domain = "saveukrainefund.com"
+  main_domain  = "saveukrainefund.com"
 }
 
 # ------------------------------------------

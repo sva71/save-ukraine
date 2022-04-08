@@ -116,7 +116,7 @@ data "aws_iam_policy_document" "oai" {
 # ------------------------------------------
 
 resource "aws_iam_user" "this" {
-  name = "cloudfront-deploy"
+  name = "${local.project_name}-cloudfront-deploy"
 }
 resource "aws_iam_access_key" "this" {
   user = aws_iam_user.this.name
@@ -223,7 +223,7 @@ module "cdn" {
   }
 
   viewer_certificate = {
-    acm_certificate_arn      = aws_acm_certificate.certificate.arn
+    acm_certificate_arn      = module.acm.acm_certificate_arn
     ssl_support_method       = "sni-only"
     minimum_protocol_version = "TLSv1.2_2021"
   }

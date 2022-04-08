@@ -1,2 +1,15 @@
 /dist/
 /node_modules/
+
+.terraform
+builds/*
+terraform.tfstate
+terraform.tfstate*
+.terragrunt-cache
+.terraform.lock.hcl
+terraform/modules/*/*.tfvars
+terraform/modules/*/provider.tf
+terraform/modules/*/*.tfstate.*
+terraform/**/*.crt
+terraform/**/*.key
+terraform/**/*.chain

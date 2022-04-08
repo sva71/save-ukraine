@@ -184,7 +184,10 @@ module "cdn" {
   source  = "terraform-aws-modules/cloudfront/aws"
   version = "2.9.3"
 
-  aliases = [local.main_domain]
+  aliases = [
+    local.main_domain,
+    "www.${local.main_domain}"
+  ]
 
   price_class         = "PriceClass_All"
   wait_for_deployment = false
@@ -235,6 +238,18 @@ module "cdn" {
 resource "aws_route53_record" "this" {
   zone_id = data.aws_route53_zone.this.zone_id
   name    = local.main_domain
+  type    = "A"
+
+  alias {
+    name                   = module.cdn.cloudfront_distribution_domain_name
+    zone_id                = module.cdn.cloudfront_distribution_hosted_zone_id
+    evaluate_target_health = true
+  }
+}
+
+resource "aws_route53_record" "www" {
+  zone_id = data.aws_route53_zone.this.zone_id
+  name    = "www.${local.main_domain}"
   type    = "A"
 
   alias {

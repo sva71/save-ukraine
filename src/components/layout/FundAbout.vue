@@ -25,25 +25,26 @@ export default {
 
     data() {
         return {
-            textTitle: { 'UK': 'Про Фонд', 'EN': 'Fund About' },
+            textTitle: { 'UK': 'Про Фонд', 'EN': 'About Us' },
             textP1: {
                 'UK': 'Ми - безпосередні учасники бойових дій, тому поінформовані про актуальний дефіцит українських ' +
                     'військових і розробили найшвидші шляхи вирішення адресних потреб. Даємо змогу усім небайдужим ' +
                     'з будь-якої точки планети дистанційно брати участь у боях за Україну першочергової важливості, ' +
                     'підтримуючи збройний арсенал на передовій.',
-                'EN': 'We are direct participants in hostilities, so we have actual information about needs of our ' +
-                    'troops and we\'ve developed the fastest routes of solving targeted needs. We give an opportunity ' +
-                    'to all those who are not indifferent from anywhere in the world to take part in priority battles ' +
-                    'for Ukraine distantly and support weapons arsenal at the forefront.'
+                'EN': 'Being the on-site participants of the combat in Ukraine, we are aware of the current ' +
+                    'necessities of the troops and have worked out the quickest routes to address the targeted needs. ' +
+                    'We would like to invite all who care from anywhere in the world to remotely support the battles ' +
+                    'for Ukraine. This is of paramount importance at the moment and you will be helping to aid the ' +
+                    'armed arsenal at the frontline.'
             },
             textP2: {
                 'UK': 'Ми працюємо з Укроборонпромом, власноруч забезпеуємо армію танками та летальною зброєю. А також ' +
                     'блискавично лагодимо підбите й повертаємо на лінію 0. Швидко доставляємо в гарячі точки бойові ' +
                     'літаки та гелікоптери, засоби ППО, ПЗРК, важку бронетехніку, іншу зброю.',
-                'EN': 'We contribute with Ukroboronprom, provide armed forces with tanks and lethal weapons by ' +
-                    'ourselves. Also we lightning fast repair damaged equipment and return it to the forefront. ' +
-                    'Fast delivery military planes and helicopters, air defence systems, anti-aircraft missile systems, ' +
-                    'heavy armored vehicles and other weapons to hot spots.'
+                'EN': 'We work with Ukroboronprom, we personally provide the army with tanks and lethal weapons. ' +
+                    'We also quickly repair the damaged and return it back to where it is needed. We deliver combat ' +
+                    'aircraft and helicopters, air defense systems, MANPADS, heavy armored vehicles, and other ' +
+                    'weapons to hot spots.'
             }
         }
     }

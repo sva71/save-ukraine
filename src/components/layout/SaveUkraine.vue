@@ -34,18 +34,19 @@ export default {
     data() {
         return {
             bigTitle: { 'UK': 'Save Ukraine!', 'EN': 'Save Ukraine!' },
-            subTitle: { 'UK': 'Благодійний фонд «Save Ukraine».', 'EN': 'Charitable Foundation «Save Ukraine».'},
+            subTitle: { 'UK': 'Благодійний фонд «Save Ukraine».', 'EN': 'A Charity Foundation «Save Ukraine».'},
             descriptionText: {
                 'UK': 'Швидке забезпечення термінових потреб ЗСУ, Нацгвардії, поліції та інших військових формувань.\n' +
                     'Фонд засновано з 2014 року - з початку першої військової агресії росії. Дві хвилини на просте ' +
                     'оформлення донату - і солдати вже отримують ваш внесок у вигляді забезпечення. Ми оминаємо ' +
                     'бюрократію і даємо сувору звітність. Кожна ваша гривня - це крок до Перемоги і підсилення ' +
                     'бойового духу, адже відчувати вашу підтримку - безцінно!',
-                'EN': 'Fast provision of urgent needs of Ukrainian Armed Forces, National Guard, Police and other ' +
-                    'military units. Foundation founded in 2014 - from the begining of russian agression. Two minutes ' +
-                    'on simple donation registration - and ukrainian troops are already receiving your deposit in the ' +
-                    'useful stuff form. We avoid bureaucracy and provide strict reporting. Every your UAH is one step ' +
-                    'to the Victory and morale boost, cause feeling of your support - priceless.'
+                'EN': 'Rapidly provides for the urgent needs of the Armed Forces, the National Guard, the police ' +
+                    'and other military formations. The fund was founded in 2014 - since the beginning of Russia’s ' +
+                    'first military aggression. It takes only two minutes for a simple donation, which helps the ' +
+                    'soldiers  receive your contribution in the form of security. We bypass bureaucracy and have a ' +
+                    'strict financial control. Every single hryvna is a step towards Victory and the ' +
+                    'strengthening of the fighting spirit, because feeling your support is priceless!'
             }
         }
     },

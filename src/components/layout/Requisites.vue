@@ -37,6 +37,16 @@
                         <p class="req-name">Company address</p>
                         <p class="req-value">{{ accounts[activeAccount].address }}</p>
                     </div>
+                    <div v-if="accounts[activeAccount].code" class="requisite">
+                        <p class="req-name">ЄДРПОУ (EDRPOU code)</p>
+                        <p class="req-value">{{ accounts[activeAccount].code }}</p>
+                    </div>
+                </div>
+                <div class="req-accounts-values-row">
+                    <div v-if="accounts[activeAccount].description" class="requisite">
+                        <p class="req-name">Призначення (Description)</p>
+                        <p class="req-value">{{ accounts[activeAccount].description }}</p>
+                    </div>
                 </div>
             </div>
             <div v-if="accounts[activeAccount].accountName" class="req-accounts-values">
@@ -97,7 +107,9 @@ export default {
                     ibanCode: 'UA773052990000026008030119568',
                     bankName: 'JSC CB "Privatbank"',
                     swiftCode: 'PBANUA2X',
-                    address: 'UKRAINE, Kyiv, 29, Voloshska St., 04070'
+                    address: 'UKRAINE, Kyiv, 29, Voloshska St., 04070',
+                    code: '39378394',
+                    description: 'Внесок (Donation)'
 
                 },
                 {
